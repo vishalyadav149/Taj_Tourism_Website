@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome To VS Tourism..!></Tourism></title>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="logo">
+            <img src="/images/logo.png" alt="taj Mahal">
+           </div>
+            <ul>
+                <li>Home</li>
+                <li>Visiting Hours & Ticketing</li>
+                <li>Nearby Attractions</li>
+                <li>Night Viewing</li>
+                <li>Do's & Dont's</li>
+                <li>Agra Fort</li>
+                <li>Fatehpur Sikri</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/tajmahal1.jpg" alt="" width="1100" height="auto">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tajmahal2.jpg" alt="" width="1100" height="auto">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tajmahal4.jpg" alt="" width="1100" height="auto">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tajmahal3.jpg" alt="" width="1100" height="auto">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <marquee  direction="left">Taj Mahal is open for visitors. <span>
+        <b>NOTE:</b> Visitors are requested to follow covid guidelines strictly please.</span> <span><b>NOTE:</b> Drone camera is strictly prohibited in and around the Taj Mahal. </span>
+      </marquee>
+
+                <div class="container1">
+                <p>Entry tickets can be bought online through the website of Archaeological Survey of India <a href="https://asi.payumoney.com/#/">https://asi.payumoney.com/#/</a> , window ticketing is also available now.</p>
+                   <p> *** Kindly note that issues related to ticketing may kindly be sent / addressed to the custodian department of Taj Mahal which is the Archaeological Survey of India.
+                    We, the department of Tourism are operating this website just for the information purpose for the tourists.</p>
+                </div>
+<div class="art">
+        <img src="/images/top-art.png" alt="" >
+    <h4>You Deserve to Visit - <b>The Taj! Once More!</b></h4>
+    </div>
+
+    <div class="container">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Get In Touch</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Id" required>
+        <input type="text" id="phone" placeholder="Phone No." required>
+        <textarea id="message" rows="10" placeholder="How can we help you?"></textarea>
+        <button type="submit">Send</button>
+        </form>
+        
+    </div>
+  
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+              Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "vy432502@gmail.com",
+          Password : "19AE14B76E75B37565751D64EABCB3DFBEA4",
+          To : 'vy432502@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "New Contact From Enquiry",
+          Body : "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Phone No:" + document.getElementById("phone").value
+          + "<br> Message:" + document.getElementById("message").value
+      }).then(
+        message => alert("Message Sent Successfully!")
+      );
+            }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
